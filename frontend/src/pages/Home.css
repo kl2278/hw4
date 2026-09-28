@@ -1,0 +1,131 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--navy), #1e3a6d);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 8vw, 3.25rem);
+  margin: 0 0 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3.5rem 1.25rem;
+  }
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  max-width: 32rem;
+  margin: 0 auto 1.75rem;
+  color: #dce4f2;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-cta,
+.hero-quiz-cta {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--sans);
+  cursor: pointer;
+}
+
+.hero-cta {
+  background: #fff;
+  color: var(--navy);
+  border: 2px solid var(--accent);
+}
+
+.hero-quiz-cta {
+  background: var(--accent);
+  color: var(--navy);
+  border: 2px solid var(--accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-cta,
+  .hero-quiz-cta {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .hero-cta:hover,
+  .hero-quiz-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid var(--cream-deep);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .feature-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(26, 35, 64, 0.12);
+  }
+}
+
+.feature-card h3 {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+.feature-card p {
+  color: #4a5468;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.visit-us {
+  background: var(--soft-blue);
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.visit-us h2 {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+.visit-us p {
+  max-width: 30rem;
+  margin: 0 auto;
+  color: #4a5468;
+}

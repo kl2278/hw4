@@ -1,0 +1,57 @@
+:root {
+  --navy: #00356b;
+  --cream: #fdf8ee;
+  --cream-deep: #f6ecd9;
+  --soft-blue: #dbe9f6;
+  --soft-blue-deep: #c3daf0;
+  --accent: #f2967f;
+  --accent-deep: #e07a62;
+  --sans: Calibri, Carlito, "Segoe UI", Roboto, sans-serif;
+  --serif: "Cormorant Garamond", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--cream);
+  color: #1a2340;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--serif);
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scroll-reveal utility (Products page cards). JS only adds the "reveal"
+   class when prefers-reduced-motion is off, so this block never runs for
+   anyone who has that setting on. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

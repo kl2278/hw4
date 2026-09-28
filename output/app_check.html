@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Campus Customs — App Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  :root {
+    --navy: #00356b;
+    --cream: #fdf8ee;
+    --cream-deep: #f6ecd9;
+    --soft-blue: #dbe9f6;
+    --soft-blue-deep: #c3daf0;
+    --accent: #f2967f;
+    --sans: Calibri, Carlito, "Segoe UI", Roboto, sans-serif;
+    --serif: "Cormorant Garamond", Georgia, serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    background: var(--cream);
+    color: #1a2340;
+    line-height: 1.5;
+  }
+
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 1.5rem 2rem;
+  }
+
+  header h1 {
+    font-family: var(--serif);
+    margin: 0 0 0.35rem;
+    font-size: 2rem;
+  }
+
+  header p {
+    margin: 0;
+    color: #dce4f2;
+    font-size: 0.95rem;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .check {
+    background: #fff;
+    border: 1px solid var(--cream-deep);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 16px rgba(26, 35, 64, 0.08);
+  }
+
+  .check h2 {
+    font-family: var(--serif);
+    color: var(--navy);
+    margin: 0 0 0.75rem;
+    font-size: 1.6rem;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 0.15rem;
+  }
+
+  .check img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--cream-deep);
+    border-radius: 8px;
+    margin: 0.75rem 0 0;
+  }
+
+  .check .enlarge-note {
+    margin: 0.3rem 0 1rem;
+    font-size: 0.8rem;
+    color: #5a6379;
+    font-style: italic;
+  }
+
+  .check p {
+    margin: 0;
+    color: #333c50;
+  }
+
+  .banner {
+    background: var(--soft-blue);
+    border: 1px solid var(--soft-blue-deep);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Campus Customs — App Check</h1>
+    <p>Screenshots and notes from testing the live site (Homework 4, Campus Customs).</p>
+  </header>
+  <main>
+    <p class="banner">
+      Three checks below, each confirming a piece of the app actually works end to end in the
+      browser — not just in isolated tests.
+    </p>
+
+    <section class="check">
+      <h2>Chat checking inventory</h2>
+      <a href="app_check_images/inventory.png" target="_blank" rel="noopener">
+        <img src="app_check_images/inventory.png" alt="Boola chat panel reporting price and stock by size for the Basic Hoodie Big Yale, next to the product page's stock table" />
+      </a>
+      <p class="enlarge-note">Click to enlarge.</p>
+      <p>
+        Boola gives the price and stock by size for the Basic Hoodie Big Yale, and every number
+        matches the product page's stock table alongside it — both are reading the same
+        inventory data from the database.
+      </p>
+    </section>
+
+    <section class="check">
+      <h2>Dynamic search-result cards</h2>
+      <a href="app_check_images/search_cards.png" target="_blank" rel="noopener">
+        <img src="app_check_images/search_cards.png" alt="Products page showing hoodie product cards and a Showing results for hoodies banner after asking the chat about hoodies" />
+      </a>
+      <p class="enlarge-note">Click to enlarge.</p>
+      <p>
+        After asking Boola "What hoodies do you have?", the Products page grid updates live to
+        show the matching hoodies as product cards under a "Showing results for: hoodies" banner
+        — the chat's search results and the storefront grid are the same data, not two separate
+        systems.
+      </p>
+    </section>
+
+    <section class="check">
+      <h2>Usability feature: Products page filters and sorting</h2>
+      <a href="app_check_images/usability.png" target="_blank" rel="noopener">
+        <img src="app_check_images/usability.png" alt="Products page toolbar filtered to Hoodies category, size M in stock, sorted by price low to high" />
+      </a>
+      <p class="enlarge-note">Click to enlarge.</p>
+      <p>
+        With Category set to Hoodies, Size in stock set to M, and Sort by price set to Low to
+        high, the grid narrows to only the hoodies actually in stock in medium, cheapest first —
+        confirming the filters and sorting from Problem 9 work correctly together.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

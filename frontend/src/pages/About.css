@@ -1,0 +1,15 @@
+.about {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.about h1 {
+  color: var(--navy);
+}
+
+.about p {
+  color: #333c50;
+  line-height: 1.6;
+  font-size: 1.02rem;
+}

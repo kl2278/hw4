@@ -1,0 +1,86 @@
+.navbar {
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 0.9rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+}
+
+.navbar .brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    gap: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.nav-links a {
+  color: #dce4f2;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+.nav-pill {
+  border: 1px solid #ffffff88;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+}
+
+.nav-pill-solid {
+  background: #ffffff;
+  color: var(--navy) !important;
+  border: 1px solid #ffffff;
+}
+
+.nav-pill-button {
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.nav-greeting {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
